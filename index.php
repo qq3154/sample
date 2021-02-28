@@ -6,10 +6,10 @@
 		<?php 
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
 			# Heroku credential 
-			$host_heroku = "ec2-52-72-162-207.compute-1.amazonaws.com";
-			$db_heroku = "d6mojbeuc9tceb";
-			$user_heroku = "esgecrotceaxcn";
-			$pw_heroku = "1e14c630c237f514e40e5a7cf09c38074f3c6bafed3077120ec69fb4faf7e93d";
+			$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
+			$db_heroku = "dfafdda85iuufp";
+			$user_heroku = "fwhvqbdasvcpdw";
+			$pw_heroku = "ee454b013d21e0981d72f13efd5297cb5392457328d856308fe8bd8b23ac168a";
 			# Create connection to Heroku Postgres
 			$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 			$pg_heroku = pg_connect($conn_string);
