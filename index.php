@@ -51,12 +51,10 @@
 			}
 			*/
 
-			session_start();
 			$role = 0;
 			if($role == 0){
 				header("location: login.php");
-			}
-			
+			}		
 
 			# Display data column by column
 			$i = 0;
