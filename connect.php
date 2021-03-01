@@ -24,10 +24,8 @@
 	$query = "select * from users where username ='$username' AND password = '$password' ";
 	$result = pg_query($pg_heroku, $query);
 	if(pg_num_rows($result) == 1){
-		/*echo '<script language="javascript">';
-		echo 'alert("Login successful!")';
-		echo '</script>';*/
-		$role = query($pg_heroku, "select role from users where username ='$username' AND password = '$password' ");
+		$query = "select role from users where username ='$username' AND password = '$password' ";
+		$role = query($pg_heroku, $query);
 		echo "$role";
 		header("location: index.php");
 	}
