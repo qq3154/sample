@@ -33,10 +33,14 @@
 		</nav>
 		<?php 			
 			session_start();
-			$pg_heroku = $_SESSION["pg_heroku"];
+			if(!isset($_SESSION[role] != 3) {
+				echo '<h1>You are not an authorised user</h1>';
+				header( "refresh:2;url=index.php" );
+				die();
+			}
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
 			
-			/*
+			
 			# Heroku credential 
 			$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 			$db_heroku = "dfafdda85iuufp";
@@ -47,7 +51,7 @@
 			$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 				
 			$pg_heroku = pg_connect($conn_string);
-			*/
+			
 
 			# Get data by query
 			$query = 'select * from test_lab6';
