@@ -28,13 +28,14 @@
 		$role = $row['role'];
 		$_SESSION["valid"] = true;
 		echo "Login successful!!!";
-		header( "refresh:5;url=index.php" );
+		header( "refresh:2;url=index.php" );
 	}
 	else {
 		echo '<script language="javascript">';
 		echo 'alert("Login failed!")';
 		echo '</script>';
-		header("location: login.php");
+		echo "Username or Password is wrong. Please try again!!!";
+		hheader( "refresh:2;url=login.php" );
 	}	
 	
 ?>
