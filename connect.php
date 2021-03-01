@@ -27,10 +27,11 @@
 		$_SESSION["role"] = $row['role'];
 		$_SESSION["valid"] = true;
 		echo "Login successful!!!";
-		header( "refresh:2;url=index.php" );
+		header( "refresh:1;url=index.php" );
 	}
 	else {
-		echo "Username or Password is wrong. Please try again!!!";
+		echo "Username or Password is wrong. ";
+		echo "Please try again!!!";
 		header( "refresh:2;url=login.php" );
 	}	
 	
