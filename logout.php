@@ -11,7 +11,7 @@
 
 			// destroy the session
 			session_destroy();
-			echo "Login successful!!!";
+			echo "Logout successful!!!";
 			header( "refresh:2;url=index.php" );
 		?>
 
