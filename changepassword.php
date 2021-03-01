@@ -77,17 +77,4 @@
 			
 	$pg_heroku = pg_connect($conn_string);
 
-	if (count($_POST) > 0 ){
-		$query = "select * from users where username ='$_SESSION["username"]' ";
-		$result = pg_query($pg_heroku, $query);
-		$row = pg_fetch_assoc($result);
-		/*
-		if ($_POST["currentPassword"] == $row["password"]) {
-			pg_query($conn, "UPDATE users set password='" . $_POST["newPassword"] . "' WHERE username='" . $_SESSION["username"] . "'");
-			$message = "Password Changed";
-		} 
-		else
-			$message = "Current Password is not correct";		
-		*/
-	}
 ?>
