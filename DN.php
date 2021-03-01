@@ -34,9 +34,8 @@
 		<?php 			
 			session_start();
 			if($_SESSION[role] != 3) {
-				echo '<h1>You are not an authorised user</h1>';
+				eecho "Login successful!!!";
 				header( "refresh:2;url=index.php" );
-				die();
 			}
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
 			
