@@ -56,12 +56,14 @@
 		echo '<script language="javascript">';
 		echo 'alert("Login successful!")';
 		echo '</script>';
-
+		$role = query($pg_heroku, "select role from users where username ='$username' AND password = '$password' ");
+		//header("location: index.php");
 	}
 	else {
 		echo '<script language="javascript">';
 		echo 'alert("Login failed!")';
 		echo '</script>';
+		//header("location: login.php");
 	}	
 	
 ?>
