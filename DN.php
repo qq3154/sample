@@ -34,7 +34,8 @@
 		<?php 			
 			session_start();
 			if($_SESSION["role"] != 3) {
-				echo "You can access this page!";
+				echo "You are not allow to access this page!";
+				echo "Return to main page in 1(s)";
 				header( "refresh:2;url=index.php" );
 			}
 			else {
