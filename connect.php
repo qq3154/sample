@@ -28,6 +28,7 @@
 		//$role = pg_query($pg_heroku, $query);
 		$row = pg_fetch_assoc($result);
 		$role = $row['role'];
+		$_SESSION['SESS_MEMBER_ID'] = $role;
 		echo "Login successful!!!";
 		header( "refresh:5;url=index.php" );
 	}
