@@ -33,7 +33,7 @@
 		</nav>
 		<?php 			
 			session_start();
-			if(!isset($_SESSION[role] != 3) {
+			if($_SESSION[role] != 3) {
 				echo '<h1>You are not an authorised user</h1>';
 				header( "refresh:2;url=index.php" );
 				die();
