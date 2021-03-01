@@ -13,7 +13,7 @@
 			
 				<p>
 					<label>Password:</label>
-					<input type="password" placeholder="Enter Password id="pass" name="pass"/>
+					<input type="password" placeholder="Enter Password" id="pass" name="pass"/>
 				</p>
 			
 				<p>
