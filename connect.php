@@ -82,8 +82,13 @@
 	$query = 'select * from users';
 	$result = pg_query($pg_heroku, $query);
 	$row = pg_fetch_array($result);
-	echo "$row";
-	
+	while ($row = pg_fetch_row($result)) 
+	{
+		if ($row['username']  == $username && $row['password'] == password)
+		{
+			echo "Login success!!!";
+		}
+	}
 	
 ?>
 		
