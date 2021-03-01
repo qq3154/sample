@@ -42,12 +42,18 @@
 			
 			# Create connection to Heroku Postgres
 			$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
-			*/
+			
 			$pg_heroku = pg_connect($conn_string);
 			
 			if (!$pg_heroku)
 			{
 				die('Error: Could not connect: ' . pg_last_error());
+			}
+			*/
+
+			session_start();
+			if($_SESSION["valid"] != true){
+				header("location: connect.php");
 			}
 			# Get data by query
 			$query = 'select * from test_lab6';
