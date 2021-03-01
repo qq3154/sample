@@ -11,6 +11,7 @@
 			.myDIV {
 				width: 80%;
 				margin: auto;
+				padding: 30;
 				text-align: center;
 				background-color: lightblue;
 				margin-top: 20px
@@ -19,7 +20,7 @@
 			.mainmenu{
 				width: 80%;
 				margin: auto;
-				background-color: green;
+				background-color: beige;
 			}
 			h3{
 				padding-left:50px;
