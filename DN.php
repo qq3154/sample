@@ -34,7 +34,7 @@
 		<?php 			
 			session_start();
 			if($_SESSION[role] != 3) {
-				eecho "Login successful!!!";
+				echo "Login successful!!!";
 				header( "refresh:2;url=index.php" );
 			}
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
