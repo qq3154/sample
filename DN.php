@@ -19,6 +19,7 @@
 			.mainmenu{
 				width: 80%;
 				margin: auto;
+				background-color: green;
 			}
 			h3{
 				padding-left:50px;
