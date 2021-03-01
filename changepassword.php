@@ -82,6 +82,15 @@
 		$username = $_SESSION["username"];
 		$query = "select * from users where username ='$username' ";
 		$result = pg_query($pg_heroku, $query);
+		$row = mysqli_fetch_array($result);
+		if ($_POST["currentPassword"] == $row["password"]) {
+			$newpwd = $_POST["newPassword"];
+			$query = "UPDATE users set password = '$newpwd' where username = '$username' ";
+			pg_query($pg_heroku, $query);
+			$message = "Password Changed";
+		} 
+		else
+			$message = "Current Password is not correct";
 	}
 	
 ?>
