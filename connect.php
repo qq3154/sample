@@ -81,14 +81,7 @@
 	$password = $_POST['pass'];
 	$query = 'select * from users';
 	$result = pg_query($pg_heroku, $query);
-	if ($row['username']  == $username && $row['password] == password)
-	{
-		echo "Login success!!!";
-	}
-	esle
-	{
-		echo "Failed to login!!!";
-	}
+	
 	
 ?>
 		
