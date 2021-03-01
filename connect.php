@@ -81,6 +81,8 @@
 	$password = $_POST['pass'];
 	$query = "select * from users where username ='admin' AND password = 'admin' ";
 	$result = pg_query($pg_heroku, $query);
+	if(pg_num_rows($result) == 1)
+		echo "login successful!";
 	
 	
 	
