@@ -87,10 +87,11 @@
 			$newpwd = $_POST["newPassword"];
 			$query = "UPDATE users set password = '$newpwd' where username = '$username' ";
 			pg_query($pg_heroku, $query);
-			$message = "Password Changed";
+			echo "Change password successful!!!";
+			header( "refresh:1;url=index.php" );
 		} 
 		else
-			$message = "Current Password is not correct";
+			echo "Current Password is not correct";
 	}
 	
 ?>
