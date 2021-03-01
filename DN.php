@@ -11,11 +11,12 @@
 			.myDIV {
 				width: 80%;
 				margin: auto;
-				padding: 30;
+				padding: 20px;
 				text-align: center;
 				background-color: lightblue;
 				margin-top: 20px
 				margin-bottom: 40px;
+				border: 5px solid black;
 			}	
 			.mainmenu{
 				width: 80%;
