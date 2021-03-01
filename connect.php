@@ -62,12 +62,7 @@
 		echo '<script language="javascript">';
 		echo 'alert("Login failed!")';
 		echo '</script>';
-	}
-}
-
-		
-	
-	
+	}	
 	
 ?>
 		
