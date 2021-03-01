@@ -79,7 +79,7 @@
 
 	$username = $_POST['user'];
 	$password = $_POST['pass'];
-	$query = "select * from users where username = '".$username"' and password =' ".$password"' ";
+	$query = "select * from users where username ='admin' AND password = 'admin' ";
 	$result = pg_query($pg_heroku, $query);
 	
 	
