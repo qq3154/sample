@@ -88,6 +88,10 @@
 		{
 			echo "Login success!!!";
 		}
+		esle
+		{
+			echo "Failed to login!!!";
+		}
 	}
 	
 ?>
