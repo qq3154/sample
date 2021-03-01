@@ -34,7 +34,7 @@
 		<?php 			
 			
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
-			/*
+			
 			# Heroku credential 
 			$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 			$db_heroku = "dfafdda85iuufp";
@@ -45,8 +45,8 @@
 			$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 				
 			$pg_heroku = pg_connect($conn_string);
-			*/
-			$pg_heroku = $_SESSION["pg_heroku"];
+			
+
 			# Get data by query
 			$query = 'select * from test_lab6';
 			$result = pg_query($pg_heroku, $query);

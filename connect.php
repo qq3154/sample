@@ -10,7 +10,6 @@
 	$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 			
 	$pg_heroku = pg_connect($conn_string);
-	$_SESSION["pg_heroku"] = pg_connect($conn_string);
 			
 	if (!$pg_heroku)
 	{
