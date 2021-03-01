@@ -33,7 +33,7 @@
 		</nav>
 		<?php 			
 			session_start();
-			if($_SESSION[role] != 3) {
+			if($_SESSION["role"] != 3) {
 				echo "Login successful!!!";
 				header( "refresh:2;url=index.php" );
 			}
