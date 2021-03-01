@@ -15,7 +15,7 @@
 				header( "refresh:2;url=index.php" );
 			}
 			else {
-				echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
+				
 						
 				# Heroku credential 
 				$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
