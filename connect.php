@@ -81,6 +81,7 @@
 	$password = $_POST['pass'];
 	$query = 'select * from users';
 	$result = pg_query($pg_heroku, $query);
+	/*
 	$row = pg_fetch_array($result);
 	while ($row = pg_fetch_row($result)) 
 	{
@@ -93,6 +94,8 @@
 			echo "Failed to login!!!";
 		}
 	}
-	
+	*/
+	echo "$username";
+	echo "$password";
 ?>
 		
