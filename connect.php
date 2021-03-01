@@ -5,6 +5,10 @@
 	<body>
 
 		<?php
+			$username = $POST['user'];
+			$password = $POST['pass';]
+
+
 			$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 			$db_heroku = "dfafdda85iuufp";
 			$user_heroku = "fwhvqbdasvcpdw";
@@ -15,6 +19,18 @@
 			if (!$pg_heroku)
 			{
 				die('Error: Could not connect: ' . pg_last_error());
+			}
+
+			$result = pg_query("selct * from users where username = '$username' and password = '$password'")
+				or die("Failed to query database");
+			$row = pg_fetch_array($result);
+			if ($row['username']  == $username && $row['password] == password)
+			{
+				echo "Login success!!!";
+			}
+			esle
+			{
+				echo "Failed to login!!!";
 			}
 		?>
 		
