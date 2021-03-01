@@ -1,8 +1,19 @@
 <?php
 	session_start();
-	unset($_SESSION["username"]);
-	unset($_SESSION["role"]);
-	session_detroy();
-	echo "Logout successful!!!";
-	header( "refresh:2;url=index.php" );
 ?>
+<!DOCTYPE html>
+<html>
+	<body>
+
+		<?php
+			// remove all session variables
+			session_unset();
+
+			// destroy the session
+			session_destroy();
+			echo "Login successful!!!";
+			header( "refresh:2;url=index.php" );
+		?>
+
+	</body>
+</html>
