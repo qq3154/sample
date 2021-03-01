@@ -52,7 +52,7 @@
 			*/
 
 			session_start();
-			if($_SESSION["valid"] != true){
+			if($role == null){
 				header("location: login.php");
 			}
 			
