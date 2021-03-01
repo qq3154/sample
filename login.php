@@ -37,19 +37,16 @@
 			}
 
 			/* Center the image and position the close button */
-			.imgcontainer {
-			  text-align: center;
-			  margin: 24px 0 12px 0;
-			  position: relative;
-			}
+			
 
-			img.avatar {
-			  width: 40%;
-			  border-radius: 50%;
-			}
+			
 
 			.container {
-			  padding: 16px;
+			  border: solid gray 1px;
+			  width: 20%;
+			  border-radius: 5px;
+			  margin: 100px auto;
+			  background: white;
 			}
 
 			span.psw {
@@ -125,15 +122,15 @@
 		</style>
 	</head>
 	<body>
-		<form action="action_page.php" method="post">
+		<form action="connect.php" method="post">
 				<div class="container">
 					 <label for="uname"><b>Username</b></label>
-					<input type="text" placeholder="Enter Username" name="uname" required>
+					<input type="text" placeholder="Enter Username" id ="user" name="user" required>
 
 					 <label for="psw"><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" name="psw" required>
+					<input type="password" placeholder="Enter Password" id="pass" name="pass" required>
 
-					<button type="submit">Login</button>					
+					<button type="submit" id="btn">Login</button>					
 				</div>
 			
 			</form>
