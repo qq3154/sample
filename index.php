@@ -37,6 +37,6 @@
 				header("location: login.php");
 			}
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
-			
+		?>	
 	</body>
 </html>
