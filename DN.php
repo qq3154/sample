@@ -8,6 +8,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<style>
+			#myDIV {
+				width: 100%;
+				padding: 50px 0;
+				text-align: center;
+				background-color: lightblue;
+				margin-top: 20px;
+			}	
 			h3{
 				margin: 0;
 				display: inline-block;
