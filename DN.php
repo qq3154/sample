@@ -31,11 +31,17 @@
 				</ul>
 			 </div>
 		</nav>
+
+		<button onclick="myFunction()">Try it</button>
+
+		<div id="myDIV">
+			This is my DIV element.
+		</div>
 		<?php 			
 			session_start();
 			if($_SESSION["role"] != 3) {
 				echo "You are not allow to access this page!";
-				echo "Return to main page in 1(s)";
+				echo "Return to main page in 1 second(s)";
 				header( "refresh:2;url=index.php" );
 			}
 			else {
@@ -51,7 +57,8 @@
 				$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 				
 				$pg_heroku = pg_connect($conn_string);
-			
+				
+
 				# Get data by query
 				$query = 'select * from danang';
 				$result = pg_query($pg_heroku, $query);
@@ -87,5 +94,16 @@
 				echo '</table></body></html>';
 			}			
 		?> 
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myDIV");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} 
+			else {
+				x.style.display = "none";
+			}
+		}
+	</script>
 	</body>
 </html>
