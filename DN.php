@@ -8,14 +8,15 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<style>
-			#myDIV {
-				width: 100%;
+			.myDIV {
+				width: 80%;
 				padding: 50px 0;
 				text-align: center;
 				background-color: lightblue;
 				margin-top: 20px;
 			}	
 			h3{
+				padding-left:50px;
 				margin: 0;
 				display: inline-block;
 			}
@@ -73,7 +74,7 @@
                 <button onclick="myFunction()">show</button>              
             </ion-item>
 		</ion-list>
-		<div id="myDIV" style = "display:none">
+		<div class="myDIV" id="myDIV" style = "display:none">
 			<?php
 				# Get data by query
 				$query = 'select * from danang';
