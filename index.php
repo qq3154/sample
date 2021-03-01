@@ -53,7 +53,7 @@
 
 			session_start();
 			if($_SESSION["valid"] != true){
-				header("location: connect.php");
+				header("location: login.php");
 			}
 			# Get data by query
 			$query = 'select * from test_lab6';
