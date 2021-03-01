@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	# Heroku credential 
 	$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 	$db_heroku = "dfafdda85iuufp";
@@ -24,17 +25,14 @@
 		//$query = "select role from users where username ='$username' AND password = '$password' ";
 		//$role = pg_query($pg_heroku, $query);
 		$row = pg_fetch_assoc($result);
-		$role = $row['role'];
+		$_SESSION["role"] = $row['role'];
 		$_SESSION["valid"] = true;
 		echo "Login successful!!!";
 		header( "refresh:2;url=index.php" );
 	}
 	else {
-		echo '<script language="javascript">';
-		echo 'alert("Login failed!")';
-		echo '</script>';
 		echo "Username or Password is wrong. Please try again!!!";
-		hheader( "refresh:2;url=login.php" );
+		header( "refresh:2;url=login.php" );
 	}	
 	
 ?>
