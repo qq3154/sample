@@ -7,6 +7,28 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<?php 			
+			session_start();
+			if($_SESSION["role"] != 3) {
+				echo "You are not allow to access this page!";
+				echo "Return to main page in 1 second(s)";
+				header( "refresh:2;url=index.php" );
+			}
+			else {
+				echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
+						
+				# Heroku credential 
+				$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
+				$db_heroku = "dfafdda85iuufp";
+				$user_heroku = "fwhvqbdasvcpdw";
+				$pw_heroku = "ee454b013d21e0981d72f13efd5297cb5392457328d856308fe8bd8b23ac168a";
+			
+				# Create connection to Heroku Postgres
+				$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
+				
+				$pg_heroku = pg_connect($conn_string);
+			}					
+		?> 
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse">
@@ -72,28 +94,7 @@
 			?>		
 		</div>
 		
-		<?php 			
-			session_start();
-			if($_SESSION["role"] != 3) {
-				echo "You are not allow to access this page!";
-				echo "Return to main page in 1 second(s)";
-				header( "refresh:2;url=index.php" );
-			}
-			else {
-				echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
-						
-				# Heroku credential 
-				$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
-				$db_heroku = "dfafdda85iuufp";
-				$user_heroku = "fwhvqbdasvcpdw";
-				$pw_heroku = "ee454b013d21e0981d72f13efd5297cb5392457328d856308fe8bd8b23ac168a";
-			
-				# Create connection to Heroku Postgres
-				$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
-				
-				$pg_heroku = pg_connect($conn_string);
-			}					
-		?> 
+		
 		<script>
 			function myFunction() {
 			  var x = document.getElementById("myDIV");
