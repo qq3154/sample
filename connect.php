@@ -27,7 +27,7 @@
 		$query = "select role from users where username ='$username' AND password = '$password' ";
 		$role = pg_query($pg_heroku, $query);
 		echo "$role";
-		header("location: index.php");
+		//header("location: index.php");
 	}
 	else {
 		echo '<script language="javascript">';
