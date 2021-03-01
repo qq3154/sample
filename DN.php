@@ -14,18 +14,14 @@
 				echo "Return to main page in 1 second(s)";
 				header( "refresh:2;url=index.php" );
 			}
-			else {
-				echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
-						
+			else {					
 				# Heroku credential 
 				$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 				$db_heroku = "dfafdda85iuufp";
 				$user_heroku = "fwhvqbdasvcpdw";
-				$pw_heroku = "ee454b013d21e0981d72f13efd5297cb5392457328d856308fe8bd8b23ac168a";
-			
+				$pw_heroku = "ee454b013d21e0981d72f13efd5297cb5392457328d856308fe8bd8b23ac168a";			
 				# Create connection to Heroku Postgres
-				$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
-				
+				$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";				
 				$pg_heroku = pg_connect($conn_string);
 			}					
 		?> 
@@ -54,8 +50,7 @@
 			 </div>
 		</nav>
 
-		<button onclick="myFunction()">Show products information</button>
-
+		<button onclick="myFunction()">Show products information</button
 		<div id="myDIV" style = "display:none">
 			<?php
 				# Get data by query
