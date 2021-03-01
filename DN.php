@@ -46,7 +46,7 @@
 				
 			$pg_heroku = pg_connect($conn_string);
 			*/
-
+			$pg_heroku = $_SESSION["pg_heroku"];
 			# Get data by query
 			$query = 'select * from test_lab6';
 			$result = pg_query($pg_heroku, $query);
