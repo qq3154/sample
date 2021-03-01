@@ -25,6 +25,7 @@
 		//$query = "select role from users where username ='$username' AND password = '$password' ";
 		//$role = pg_query($pg_heroku, $query);
 		$row = pg_fetch_assoc($result);
+		$_SESSION["username"] = $row['username'];
 		$_SESSION["role"] = $row['role'];
 		$_SESSION["valid"] = true;
 		echo "Login successful!!!";
