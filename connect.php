@@ -79,23 +79,17 @@
 
 	$username = $_POST['user'];
 	$password = $_POST['pass'];
-	$query = 'select * from users';
+	$query = 'seleselct * from users where username = '$username' and password = '$password'';
 	$result = pg_query($pg_heroku, $query);
-	/*
 	$row = pg_fetch_array($result);
-	while ($row = pg_fetch_row($result)) 
+	if ($row['username']  == $username && $row['password'] == password)
 	{
-		if ($row['username']  == $username && $row['password'] == password)
-		{
-			echo "Login success!!!";
-		}
-		esle
-		{
-			echo "Failed to login!!!";
-		}
+		echo "Login success!!!";
 	}
-	*/
-	echo "$username";
-	echo "$password";
+	esle
+	{
+		echo "Failed to login!!!";
+	}
+	
 ?>
 		
