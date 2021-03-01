@@ -1,13 +1,16 @@
 <html>
 	<head>
 		<title>PHP Test</title>
+		<div class="topnav">
+		<a class="active" href="#home">Home</a>
+		<a href="#news">News</a>
+		<a href="#contact">Contact</a>
+		<a href="#about">About</a>
+</div>
 	</head>
 	<body>
 		<?php 
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
-			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>';
-			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>';
-			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>';
 			# Heroku credential 
 			$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 			$db_heroku = "dfafdda85iuufp";
