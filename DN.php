@@ -13,8 +13,13 @@
 				padding: 50px 0;
 				text-align: center;
 				background-color: lightblue;
-				margin-top: 20px;
+				margin-top: 20px
+				margin-bottom: 40px;
 			}	
+			.mainmenu{
+				width: 80%;
+				margin: auto;
+			}
 			h3{
 				padding-left:50px;
 				margin: 0;
@@ -68,50 +73,51 @@
 			 </div>
 		</nav>
 
-		<ion-list>
-            <ion-item>
-                <h3>Show products information</h3>
-                <button onclick="myFunction()">show</button>              
-            </ion-item>
-		</ion-list>
-		<div class="myDIV" id="myDIV" style = "display:none">
-			<?php
-				# Get data by query
-				$query = 'select * from danang';
-				$result = pg_query($pg_heroku, $query);
-				# Display data column by column
-				$i = 0;
-				echo '<html><body><table><tr>';
-				while ($i < pg_num_fields($result))
-				{
-					$fieldName = pg_field_name($result, $i);
-					echo '<td>' . $fieldName . '</td>';
-					$i = $i + 1;
-				}
-				echo '</tr>';
-				# Display data row by row
-				$i = 0;
-				while ($row = pg_fetch_row($result)) 
-				{
-					echo '<tr>';
-					$count = count($row);
-					$y = 0;
-					while ($y < $count)
+		<div class="mainmenu">
+			<ion-list>
+				<ion-item>
+					<h3>Show products information</h3>
+					<button onclick="myFunction()">show</button>              
+				</ion-item>
+			</ion-list>
+			<div class="myDIV" id="myDIV" style = "display:none">
+				<?php
+					# Get data by query
+					$query = 'select * from danang';
+					$result = pg_query($pg_heroku, $query);
+					# Display data column by column
+					$i = 0;
+					echo '<html><body><table><tr>';
+					while ($i < pg_num_fields($result))
 					{
-						$c_row = current($row);
-						echo '<td>' . $c_row . '</td>';
-						next($row);
-						$y = $y + 1;
+						$fieldName = pg_field_name($result, $i);
+						echo '<td>' . $fieldName . '</td>';
+						$i = $i + 1;
 					}
 					echo '</tr>';
-					$i = $i + 1;
-				}
-				pg_free_result($result);
+					# Display data row by row
+					$i = 0;
+					while ($row = pg_fetch_row($result)) 
+					{
+						echo '<tr>';
+						$count = count($row);
+						$y = 0;
+						while ($y < $count)
+						{
+							$c_row = current($row);
+							echo '<td>' . $c_row . '</td>';
+							next($row);
+							$y = $y + 1;
+						}
+						echo '</tr>';
+						$i = $i + 1;
+					}
+					pg_free_result($result);
 
-				echo '</table></body></html>';
-			?>		
+					echo '</table></body></html>';
+				?>		
+			</div>
 		</div>
-		
 		
 		<script>
 			function myFunction() {
