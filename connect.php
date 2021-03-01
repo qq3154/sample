@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	# Heroku credential 
 	$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 	$db_heroku = "dfafdda85iuufp";

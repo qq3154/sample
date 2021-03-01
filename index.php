@@ -32,7 +32,7 @@
 			 </div>
 		</nav>
 		<?php 			
-			//session_start();
+			session_start();
 			if($_SESSION["valid"] != true){
 				header("location: login.php");
 			}
