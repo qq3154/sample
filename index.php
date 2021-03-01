@@ -37,6 +37,9 @@
 				header("location: login.php");
 			}
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
+			# Get data by query
+			$query = 'select * from test_lab6';
+			$result = pg_query($pg_heroku, $query);
 			# Display data column by column
 			$i = 0;
 			echo '<html><body><table><tr>';

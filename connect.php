@@ -15,9 +15,6 @@
 	{
 		die('Error: Could not connect: ' . pg_last_error());
 	}
-	# Get data by query
-	$query = 'select * from test_lab6';
-	$result = pg_query($pg_heroku, $query);
 	
 
 	$username = $_POST['user'];
