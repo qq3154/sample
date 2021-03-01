@@ -28,8 +28,8 @@
 		//$role = pg_query($pg_heroku, $query);
 		$row = pg_fetch_assoc($result);
 		$role = $row['role'];
-		echo "$role";
-		//header("location: index.php");
+		echo "Login successful!!!";
+		header( "refresh:5;url=index.php" );
 	}
 	else {
 		echo '<script language="javascript">';
