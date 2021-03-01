@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	# Heroku credential 
 	$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 	$db_heroku = "dfafdda85iuufp";
@@ -28,7 +29,7 @@
 		//$role = pg_query($pg_heroku, $query);
 		$row = pg_fetch_assoc($result);
 		$role = $row['role'];
-		$_SESSION['SESS_MEMBER_ID'] = $role;
+		$_SESSION["valid"] = true;
 		echo "Login successful!!!";
 		header( "refresh:5;url=index.php" );
 	}

@@ -51,10 +51,8 @@
 			}
 			*/
 
-			if (isset($_SESSION['SESS_MEMBER_ID']){
-				echo "asd";
-			}		
-			else{
+			session_start();
+			if($_SESSION["valid"] != true){
 				header("location: login.php");
 			}
 
