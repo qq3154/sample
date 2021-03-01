@@ -81,7 +81,7 @@
 	$password = $_POST['pass'];
 	$query = 'select * from users where username = '$username' and password = '$password'';
 	$result = pg_query($pg_heroku, $query);
-	echo "pg_num_rows($result)";
+	
 	
 	
 ?>
