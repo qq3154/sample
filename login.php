@@ -43,7 +43,7 @@
 
 			.container {
 			  border: solid gray 1px;
-			  width: 20%;
+			  width: 50%;
 			  border-radius: 5px;
 			  margin: 100px auto;
 			  background: white;
