@@ -17,36 +17,7 @@
 	# Get data by query
 	$query = 'select * from test_lab6';
 	$result = pg_query($pg_heroku, $query);
-	# Display data column by column
-	$i = 0;
-	echo '<html><body><table><tr>';
-	while ($i < pg_num_fields($result))
-	{
-		$fieldName = pg_field_name($result, $i);
-		echo '<td>' . $fieldName . '</td>';
-		$i = $i + 1;
-	}
-	echo '</tr>';
-	# Display data row by row
-	$i = 0;
-	while ($row = pg_fetch_row($result)) 
-	{
-		echo '<tr>';
-		$count = count($row);
-		$y = 0;
-		while ($y < $count)
-		{
-			$c_row = current($row);
-			echo '<td>' . $c_row . '</td>';
-			next($row);
-			$y = $y + 1;
-		}
-		echo '</tr>';
-		$i = $i + 1;
-	}
-	pg_free_result($result);
-
-	echo '</table></body></html>';
+	
 
 	$username = $_POST['user'];
 	$password = $_POST['pass'];
@@ -57,13 +28,13 @@
 		echo 'alert("Login successful!")';
 		echo '</script>';
 		$role = query($pg_heroku, "select role from users where username ='$username' AND password = '$password' ");
-		//header("location: index.php");
+		header("location: index.php");
 	}
 	else {
 		echo '<script language="javascript">';
 		echo 'alert("Login failed!")';
 		echo '</script>';
-		//header("location: login.php");
+		header("location: login.php");
 	}	
 	
 ?>
