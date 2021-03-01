@@ -28,6 +28,7 @@
 		echo 'alert("Login successful!")';
 		echo '</script>';
 		$role = query($pg_heroku, "select role from users where username ='$username' AND password = '$password' ");
+		echo "$role";
 		header("location: index.php");
 	}
 	else {
