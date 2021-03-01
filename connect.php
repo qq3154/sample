@@ -25,7 +25,7 @@
 	$result = pg_query($pg_heroku, $query);
 	if(pg_num_rows($result) == 1){
 		$query = "select role from users where username ='$username' AND password = '$password' ";
-		$role = query($pg_heroku, $query);
+		$role = pg_query($pg_heroku, $query);
 		echo "$role";
 		header("location: index.php");
 	}
