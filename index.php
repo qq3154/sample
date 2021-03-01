@@ -51,9 +51,12 @@
 			}
 			*/
 
-			if (!isset($_SESSION['SESS_MEMBER_ID']){
-				header("location: login.php");
+			if (isset($_SESSION['SESS_MEMBER_ID']){
+				echo "asd";
 			}		
+			else{
+				header("location: login.php");
+			}
 
 			# Display data column by column
 			$i = 0;
