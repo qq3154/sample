@@ -17,7 +17,7 @@
 				</p>
 			
 				<p>
-					<input type="submit" id="btn" value="Login">
+					<input type="submit" id="btn" value="Login"/>
 				</p>		
 			
 			</form>
