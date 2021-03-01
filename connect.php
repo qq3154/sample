@@ -76,5 +76,18 @@
 			pg_free_result($result);
 
 			echo '</table></body></html>';
+
+	$username = $_POST['user'];
+	$password = $_POST['pass'];
+	$result = pg_query("selct * from users");
+	$row = pg_fetch_array($result);
+	if ($row['username']  == $username && $row['password] == password)
+	{
+		echo "Login success!!!";
+	}
+	esle
+	{
+		echo "Failed to login!!!";
+	}
 ?>
 		
