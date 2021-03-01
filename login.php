@@ -8,12 +8,12 @@
 			<form action="connect.php" method="post">
 				<p>
 					<label>Username:</label>
-					<input> type="text" placeholder="Enter Username" id="user" name="user"/>
+					<input type="text" placeholder="Enter Username" id="user" name="user"/>
 				</p>
 			
 				<p>
 					<label>Password:</label>
-					<input> type="password" placeholder="Enter Password id="pass" name="pass"/>
+					<input type="password" placeholder="Enter Password id="pass" name="pass"/>
 				</p>
 			
 				<p>
