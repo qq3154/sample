@@ -82,6 +82,7 @@
 	$query = 'select * from users';
 	$result = pg_query($pg_heroku, $query);
 	$row = pg_fetch_array($result);
+	echo "$row";
 	
 	
 ?>
