@@ -7,6 +7,12 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			h3{
+				margin: 0;
+				display: inline-block;
+			}
+		</style>
 		<?php 			
 			session_start();
 			if($_SESSION["role"] != 3) {
@@ -54,8 +60,12 @@
 			 </div>
 		</nav>
 
-		<button onclick="myFunction()">Show products information</button>
-
+		<ion-list>
+            <ion-item>
+                <h3>Show products information</h3>
+                <button onclick="myFunction()">show</button>              
+            </ion-item>
+		</ion-list>
 		<div id="myDIV" style = "display:none">
 			<?php
 				# Get data by query
