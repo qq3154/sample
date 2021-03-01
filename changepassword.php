@@ -77,9 +77,10 @@
 			
 	$pg_heroku = pg_connect($conn_string);
 	
-	if(count($_POST) > 0){
+	
+	/*if(count($_POST) > 0){
 		$query = "select * from users where username ='$_SESSION["username"]' ";
 		$result = pg_query($pg_heroku, $query);
-
 	}
+	*/
 ?>
