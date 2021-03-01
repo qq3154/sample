@@ -2,6 +2,6 @@
 	unset($_SESSION["username"]);
 	unset($_SESSION["role"]);
 	session_detroy();
-	echo"<script> window.location.href = '../index.php' ; </script>";
-	exit();
+	echo "Logout successful!!!";
+	header( "refresh:2;url=index.php" );
 ?>
