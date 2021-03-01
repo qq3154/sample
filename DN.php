@@ -53,7 +53,7 @@
 				$pg_heroku = pg_connect($conn_string);
 			
 				# Get data by query
-				$query = 'select * from test_lab6';
+				$query = 'select * from danang';
 				$result = pg_query($pg_heroku, $query);
 				# Display data column by column
 				$i = 0;
