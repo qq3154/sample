@@ -10,7 +10,7 @@
 		<style>
 			.myDIV {
 				width: 80%;
-				padding: 50px 0;
+				margin: auto;
 				text-align: center;
 				background-color: lightblue;
 				margin-top: 20px
