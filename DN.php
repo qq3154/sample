@@ -29,6 +29,26 @@
 				display: inline-block;
 			}
 		</style>
+		
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">ATN</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="index.php">Home</a></li>					
+					<li><a href="HN.php">Hanoi store</a></li>
+					<li class="active"><a href="#">Danang store</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="changepassword.php"><span class="glyphicon glyphicon-user"></span> Change Password</a></li>
+					<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+				</ul>
+			 </div>
+		</nav>
+		<br><br>
 		<?php 			
 			session_start();
 			if($_SESSION["role"] == 2) {
@@ -52,25 +72,6 @@
 				$role =  $_SESSION["role"];
 			}					
 		?> 
-	</head>
-	<body>
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">ATN</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="index.php">Home</a></li>					
-					<li><a href="HN.php">Hanoi store</a></li>
-					<li class="active"><a href="#">Danang store</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="changepassword.php"><span class="glyphicon glyphicon-user"></span> Change Password</a></li>
-					<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-				</ul>
-			 </div>
-		</nav>
-		<br><br>
 		<div class="mainmenu">
 			<div>
 				<br><br>
