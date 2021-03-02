@@ -14,7 +14,7 @@
 		$role =  $_SESSION["role"];
 		if($role == 2) $table = "hanoi";
 		if($role == 3) $table = "danang";
-		$query = "select * from danang where product_name ='$name' ";
+		$query = "select * from $table where product_name ='$name' ";
 		$result = pg_query($pg_heroku, $query);
 		$row = pg_fetch_array($result);
 		if ($_POST["name"] == $row["product_name"]) {
