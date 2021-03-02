@@ -20,7 +20,7 @@
 			$quantity = $_POST['quantity'];
 			if($_SSESION["role"] ==2) $table = "hanoi";
 			if($_SSESION["role"] ==3) $table = "danang";	
-			$query = "UPDATE danang set product_price = $price, product_quantity = $quantity where product_name = '$name' ";
+			$query = "UPDATE danang set product_price = $price where product_name = '$name' ";
 			pg_query($pg_heroku, $query);
 			echo "Change password successful!!!";
 			header( "refresh:1;url=index.php" );
