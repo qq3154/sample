@@ -11,8 +11,6 @@
 			
 		$pg_heroku = pg_connect($conn_string);
 		$name = $_POST['name'];
-		$price = $_POST['price'];
-		$quantity = $_POST['quantity'];	
 		$query = "select * from danang where product_name ='$name' ";
 		$result = pg_query($pg_heroku, $query);
 		$row = pg_fetch_array($result);
@@ -21,9 +19,9 @@
 			$role =  $_SESSION["role"];
 			if($role == 2) $table = "hanoi";
 			if($role == 3) $table = "danang";
-			$query = "UPDATE $table set product_price = $price, quantity = $quantity where product_name = '$name' ";
+			$query = "DELETE FROM $table WHERE product_name = '$name' ";
 			pg_query($pg_heroku, $query);				
-			echo "Update!!!";
+			echo "Delete!!!";
 			header( "refresh:2;url=DN.php" );
 		} 
 	?>
