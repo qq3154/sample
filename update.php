@@ -13,18 +13,23 @@
 		$name = $_POST['name'];
 		$price = $_POST['price'];
 		$quantity = $_POST['quantity'];	
+		$role =  $_SESSION["role"];
+		if($role == 2) $table = "hanoi";
+		if($role == 3) $table = "danang";
 		$query = "select * from danang where product_name ='$name' ";
 		$result = pg_query($pg_heroku, $query);
 		$row = pg_fetch_array($result);
-		if ($_POST["name"] == $row["product_name"]) {
-			
-			$role =  $_SESSION["role"];
-			if($role == 2) $table = "hanoi";
-			if($role == 3) $table = "danang";
+		if ($_POST["name"] == $row["product_name"]) {		
 			$query = "UPDATE $table set product_price = $price, quantity = $quantity where product_name = '$name' ";
 			pg_query($pg_heroku, $query);				
 			echo "Update!!!";
-			header( "refresh:2;url=DN.php" );
+			if($role == 2) header( "refresh:2;url=HN.php" );
+			if($role == 3) header( "refresh:2;url=DN.php" );			
 		} 
+		else{
+			echo "Can't find item $name";
+			if($role == 2) header( "refresh:2;url=HN.php" );
+			if($role == 3) header( "refresh:2;url=DN.php" );	
+		}
 	?>
 </html>	
