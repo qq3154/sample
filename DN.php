@@ -75,12 +75,12 @@
 				</ul>
 			 </div>
 		</nav>
-
+		<br><br>
 		<div class="mainmenu">
 			<ion-list>
 				<ion-item>
-					<h3>Show products information</h3>
-					<button onclick="myFunction(1)">show</button>              
+					<h3>Update products </h3>
+					<button onclick="myFunction(1)">Update</button>              
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV1" style = "display:none">
