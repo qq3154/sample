@@ -80,7 +80,7 @@
 			<ion-list>
 				<ion-item>
 					<h3>Show products information </h3>
-					<button onclick="myFunction(1)">Update</button>              
+					<button onclick="myFunction(1)">Show</button>              
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV1" style = "display:none">
@@ -127,7 +127,7 @@
 			<ion-list>
 				<ion-item>
 					<h3>Update products</h3>
-					<button onclick="myFunction(2)">show</button>              
+					<button onclick="myFunction(2)">Update</button>              
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV2" style = "display:none">

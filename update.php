@@ -17,6 +17,6 @@
 		$quantity=$_POST['quantity'];
 		$query="UPDATE danang SET (product_price,product_quantity) = ('$price','$quantity') WHERE product_name = '$name' ";
 		pg_query($pg_heroku, $query);
-
+		echo "Update successful!!!";
 	?>
 </html>	
