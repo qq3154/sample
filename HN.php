@@ -72,7 +72,8 @@
 				$role =  $_SESSION["role"];
 			}					
 		?> 
-		<div id="maindiv" <?php if($role == 1) {?><script type="text/javascript">document.getElementById('maindiv').style.display = 'none';</script><?php} ?> class="mainmenu">
+		
+		<div<?php if ($role == 1) echo " style='display: none';"; ?>>
 			<div>
 				<br><br>
 			</div>
