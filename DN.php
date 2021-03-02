@@ -152,6 +152,9 @@
 					</p>	
 				</form>  					
 			</div>
+			<div>
+				<br><br>
+			</div>
 
 			<ion-list>
 				<ion-item>
@@ -181,7 +184,33 @@
 					</p>	
 				</form>  					
 			</div>
+			<div>
+				<br><br>
+			</div>
+
+			<ion-list>
+				<ion-item>
+					<h3>Delete products</h3>
+					<button onclick="myFunction(4)">Delete</button>              
+				</ion-item>
+			</ion-list>
+			<div class="myDIV" id="myDIV4" style = "display:none">
+				<form action="add.php" method="post" > 
+  					<p>
+						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
+						<input type="text" placeholder="Enter name" id="name" name="name"/>
+					</p>
+			
+					<p>
+						<input type="submit" id="btn" value="Submit" />
+					</p>	
+				</form>  					
+			</div>
+			<div>
+				<br><br>
+			</div>
 		</div>
+
 		
 		<script>
 			function myFunction(i) {
@@ -191,6 +220,8 @@
 					var x = document.getElementById("myDIV2");
 				if(i==3)
 					var x = document.getElementById("myDIV3");
+				if(i==4)
+					var x = document.getElementById("myDIV4");
 				if (x.style.display === "none") {
 					x.style.display = "block";
 				} else {
