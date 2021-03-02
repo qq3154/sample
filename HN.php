@@ -52,12 +52,14 @@
 		<?php 			
 			session_start();
 			if($_SESSION["role"] == 3) {
+				
 				$message = "You are not allow to access this page!<br>Return to main page";
 				echo "<script type='text/javascript'>alert('$message');</script>";
 				header( "url=index.php" );
 			}
 			else {
-					
+				
+						
 				# Heroku credential 
 				$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 				$db_heroku = "dfafdda85iuufp";
