@@ -34,6 +34,6 @@
 			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
 			echo $_SESSION["role"];
 		?>	
-		<img src="img/toy.jpg" alt="Flowers in Chania">
+		<img src="img/toy.jpg" alt="Toy Story">
 	</body>
 </html>
