@@ -53,7 +53,7 @@
 			session_start();
 			if($_SESSION["role"] == 3) {
 				
-				$message = "You are not allow to access this page!<br>Return to main page";
+				$message = "You are not allow to access this page!\nReturn to main page";
 				echo "<script type='text/javascript'>alert('$message');</script>";
 				header( "url=index.php" );
 			}
