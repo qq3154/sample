@@ -55,7 +55,7 @@
 				
 				$message = "You are not allow to access this page! Return to main page";				
 				echo "<script type='text/javascript'>alert('$message');</script>";
-				header( "refresh:1;url=index.php" );
+				header( "refresh:0;url=index.php" );
 			}
 			else {
 				
