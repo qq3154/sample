@@ -52,8 +52,8 @@
 		<?php 			
 			session_start();
 			if($_SESSION["role"] == 3) {
-				echo "<br>You are not allow to access this page!<br>";
-				echo "Return to main page in 1 second(s)<br><br>";
+				echo "You are not allow to access this page!<br>";
+				echo "Return to main page in 1 second(s)<br><br><br><br>";
 				header( "refresh:2;url=index.php" );
 			}
 			else {
@@ -72,7 +72,7 @@
 				$role =  $_SESSION["role"];
 			}					
 		?> 
-		<div class="mainmenu" <?php if ($role == 1) echo " style='display: none';"; ?>>
+		<div class="mainmenu" >
 			<div>
 				<br><br>
 			</div>
