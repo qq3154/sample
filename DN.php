@@ -134,23 +134,30 @@
 				<form method="post" action""> 
   					<p>
 						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
-						<input type="text" placeholder="Enter name" id="prodcutname" name="prodcutname"/>
+						<input type="text" placeholder="Enter name" id="name" name="name"/>
 					</p>
 			
 					<p>
 						<label>Product price: &nbsp;&nbsp;&nbsp;&nbsp; </label>
-						<input type="password" placeholder="Enter price" id="productprice" name="productprice"/>
+						<input type="password" placeholder="Enter price" id="price" name="price"/>
 					</p>
                 
 					<p>
 						<label>Product quantity:</label>
-						<input type="password" placeholder="Enter price" id="productquantity" name="productquantity"/>
+						<input type="password" placeholder="Enter price" id="quantity" name="quantity"/>
 					</p>
 			
 					<p>
 						<input type="submit" id="btn" value="Submit"/>
 					</p>	
 				</form>  	
+				<?php
+					$name=$_POST['$name'];
+					$price=$_POST['$price'];
+					$quantity=$_POST['quantity'];
+					$query="UPDATE danang SET (product_price,product_quantity) = ('$price','$quantity') WHERE product_name = '$name' ";
+					pg_query($pg_heroku, $query);
+				?>
 			</div>
 
 
