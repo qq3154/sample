@@ -20,7 +20,7 @@
 			}	
 			.mainmenu{
 				width: 80%;
-				
+				margin: auto;
 				background-color: beige;
 			}
 			h3{
@@ -119,6 +119,8 @@
 
 					echo '</table></body></html>';
 				?>		
+			</div>
+			<div>
 			</div>
 
 			<ion-list>
