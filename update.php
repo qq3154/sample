@@ -15,7 +15,12 @@
 		$result = pg_query($pg_heroku, $query);
 		$row = pg_fetch_array($result);
 		if ($_POST["name"] == $row["product_name"]) {
-			$query = "UPDATE danang set product_price = 120 where product_name = 'car_toy' ";
+			$name = $_POST['name'];
+			$price = $_POST['price'];
+			$quantity = $_POST['quantity'];
+			if($_SSESION["role"] ==2) $table = "hanoi";
+			if($_SSESION["role"] ==3) $table = "danang";	
+			$query = "UPDATE $table set product_price = $price, product_quantity = $quantity where product_name = '$name' ";
 			pg_query($pg_heroku, $query);
 			echo "Change password successful!!!";
 			header( "refresh:1;url=index.php" );
