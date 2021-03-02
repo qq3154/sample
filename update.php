@@ -22,8 +22,9 @@
 			if($_SSESION["role"] ==3) $table = "danang";	
 			$query = "UPDATE $table set product_price = $price where product_name = '$name' ";
 			pg_query($pg_heroku, $query);
-			echo "$table";
-			header( "refresh:1;url=index.php" );
+			echo $_SSESION["role"];
+			echo $table;
+			header( "refresh:3;url=index.php" );
 		} 
 	?>
 </html>	
