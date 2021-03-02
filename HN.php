@@ -77,7 +77,7 @@
 			<div>
 				<br><br>
 			</div>
-			<ion-list>
+			<ion-list <?php if ($role == 1) echo " style='display: none';"; ?>>
 				<ion-item>
 					<h3>Show products information </h3>
 					<button onclick="myFunction(1)">Show</button>              
