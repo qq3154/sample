@@ -148,16 +148,19 @@
 					</p>
 			
 					<p>
-						<input type="submit" id="btn" value="Submit"/>
+						<input type="submit" id="btn" value="Submit" onclick="update()"/>
 					</p>	
 				</form>  	
-				<?php
-					$name=$_POST['$name'];
-					$price=$_POST['$price'];
-					$quantity=$_POST['quantity'];
-					$query="UPDATE danang SET (product_price,product_quantity) = ('$price','$quantity') WHERE product_name = '$name' ";
-					pg_query($pg_heroku, $query);
-				?>
+				<script>
+					function update(){
+						$name=$_POST['$name'];
+						$price=$_POST['$price'];
+						$quantity=$_POST['quantity'];
+						$query="UPDATE danang SET (product_price,product_quantity) = ('$price','$quantity') WHERE product_name = '$name' ";
+						pg_query($pg_heroku, $query);
+					}
+					
+				</script>
 			</div>
 
 
