@@ -131,7 +131,7 @@
 			<ion-list>
 				<ion-item>
 					<h3>Update products</h3>
-					<button onclick="myFunction(2)">Update</button>              
+					<button <?php if($role == 1) {?> disabled="disabled" <?php } ?> onclick="myFunction(2)">Update</button>              
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV2" style = "display:none">
@@ -152,7 +152,7 @@
 					</p>
 			
 					<p>
-						<input type="submit" <?php if($role == 1) {?> disabled="disabled" <?php } ?> id="btn" value="Submit" />
+						<input type="submit" id="btn" value="Submit" />
 					</p>	
 				</form>  					
 			</div>
