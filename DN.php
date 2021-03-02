@@ -49,6 +49,7 @@
 				$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 				
 				$pg_heroku = pg_connect($conn_string);
+				$role =  $_SESSION["role"];
 			}					
 		?> 
 	</head>
@@ -77,6 +78,9 @@
 		</nav>
 		<br><br>
 		<div class="mainmenu">
+			<div>
+				<br><br>
+			</div>
 			<ion-list>
 				<ion-item>
 					<h3>Show products information </h3>
@@ -148,7 +152,7 @@
 					</p>
 			
 					<p>
-						<input type="submit" id="btn" value="Submit" />
+						<input type="submit" <?php if($role == 1) {?> disabled="disabled" <?php } ?> id="btn" value="Submit" />
 					</p>	
 				</form>  					
 			</div>
@@ -195,7 +199,7 @@
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV4" style = "display:none">
-				<form action="add.php" method="post" > 
+				<form action="delete.php" method="post" > 
   					<p>
 						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
 						<input type="text" placeholder="Enter name" id="name" name="name"/>
