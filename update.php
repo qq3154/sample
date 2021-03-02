@@ -11,6 +11,8 @@
 		$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 			
 		$pg_heroku = pg_connect($conn_string);
+		$sql_query = "UPDATE danang SET product_price = 100 WHERE product_name = 'car_toy'";
+		$pg_heroku->query($sql_query);
 
 		$name=$_POST['name'];
 		$price=$_POST['price'];
