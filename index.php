@@ -32,9 +32,8 @@
 				header("location: login.php");
 			}
 		?>	
+		<h2>&nbsp;&nbsp;Wellcome to ATN website</h2> 
 		<p>&nbsp;&nbsp;ATN is a Vietnamese company which is selling toys to teenagers in many provinces all over Vietnam. The company has the revenue over 500.000 dollars/year. </p>
-		<div style="margin: auto">
-			<img src="img/toy.jpg" ">
-		</div>
+		
 	</body>
 </html>
