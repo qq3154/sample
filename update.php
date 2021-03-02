@@ -15,8 +15,9 @@
 		$name=$_POST['name'];
 		$price=$_POST['price'];
 		$quantity=$_POST['quantity'];
-		$query="UPDATE danang SET product_price = $price, product_quantity = $quantity WHERE product_name = $name ";
+		$query="UPDATE danang SET (product_price, product_quantity) = ($price,$quantity) WHERE product_name = $name ";
 		pg_query($pg_heroku, $query);
+		$result = pg_query($pg_heroku, $query);
 		echo "Update!!! $price $name";
 		header( "refresh:1;url=index.php" );
 	?>
