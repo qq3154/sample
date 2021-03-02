@@ -86,7 +86,7 @@
 			<div class="myDIV" id="myDIV1" style = "display:none">
 				<?php
 					# Get data by query
-					$query = 'select * from danang';
+					$query = 'select * from hanoi';
 					$result = pg_query($pg_heroku, $query);
 					# Display data column by column
 					$i = 0;
@@ -127,7 +127,7 @@
 			<ion-list>
 				<ion-item>
 					<h3>Update products</h3>
-					<button <?php if($role == 1) {?> disabled="disabled" <?php } ?> onclick="myFunction(2)">Update</button>              
+					<button onclick="myFunction(2)">Update</button>              
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV2" style = "display:none">
