@@ -80,10 +80,10 @@
 			<ion-list>
 				<ion-item>
 					<h3>Show products information</h3>
-					<button onclick="myFunction()">show</button>              
+					<button onclick="myFunction(1)">show</button>              
 				</ion-item>
 			</ion-list>
-			<div class="myDIV" id="myDIV" style = "display:none">
+			<div class="myDIV" id="myDIV1" style = "display:none">
 				<?php
 					# Get data by query
 					$query = 'select * from danang';
@@ -120,16 +120,65 @@
 					echo '</table></body></html>';
 				?>		
 			</div>
+
+			<ion-list>
+				<ion-item>
+					<h3>Show products information</h3>
+					<button onclick="myFunction(2)">show</button>              
+				</ion-item>
+			</ion-list>
+			<div class="myDIV" id="myDIV2" style = "display:none">
+				<?php
+					# Get data by query
+					$query = 'select * from danang';
+					$result = pg_query($pg_heroku, $query);
+					# Display data column by column
+					$i = 0;
+					echo '<html><body><table><tr>';
+					while ($i < pg_num_fields($result))
+					{
+						$fieldName = pg_field_name($result, $i);
+						echo '<td>' . $fieldName . '</td>';
+						$i = $i + 1;
+					}
+					echo '</tr>';
+					# Display data row by row
+					$i = 0;
+					while ($row = pg_fetch_row($result)) 
+					{
+						echo '<tr>';
+						$count = count($row);
+						$y = 0;
+						while ($y < $count)
+						{
+							$c_row = current($row);
+							echo '<td>' . $c_row . '</td>';
+							next($row);
+							$y = $y + 1;
+						}
+						echo '</tr>';
+						$i = $i + 1;
+					}
+					pg_free_result($result);
+
+					echo '</table></body></html>';
+				?>		
+			</div>
+
+
 		</div>
 		
 		<script>
-			function myFunction() {
-			  var x = document.getElementById("myDIV");
-			  if (x.style.display === "none") {
-				x.style.display = "block";
-			  } else {
-				x.style.display = "none";
-			  }
+			function myFunction(i) {
+				if(i==1)
+					var x = document.getElementById("myDIV1");
+				if(i==2)
+					var x = document.getElementById("myDIV2");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
 			}
 		</script>
 	</body>
