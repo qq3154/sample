@@ -23,7 +23,7 @@
 			$query = "UPDATE danang set product_price = $price where product_name = '$name' ";
 			pg_query($pg_heroku, $query);
 			if($_SSESION["role"] ==2) echo "hanoi";
-			if($_SSESION["role"] ==3) echo "danang";
+			if($_SSESION["role"] =='3') echo "danang";
 			echo "update!!!";
 			header( "refresh:3;url=index.php" );
 		} 
