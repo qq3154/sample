@@ -22,9 +22,10 @@
 			
 			$query = "DELETE FROM $table WHERE product_name = '$name' ";
 			pg_query($pg_heroku, $query);				
-			echo "Delete!!!";
-			if($role == 2) header( "refresh:2;url=HN.php" );
-			if($role == 3) header( "refresh:2;url=DN.php" );
+			$message = "Delete successful!!!";				
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			if($role == 2) header( "refresh:1;url=HN.php" );
+			if($role == 3) header( "refresh:1;url=DN.php" );
 		} 
 		else{
 			echo "Can't find item $name ...";

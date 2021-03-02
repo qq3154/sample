@@ -22,7 +22,8 @@
 		if ($_POST["name"] == $row["product_name"]) {		
 			$query = "UPDATE $table set product_price = $price, quantity = $quantity where product_name = '$name' ";
 			pg_query($pg_heroku, $query);				
-			echo "Update!!!";
+			$message = "Update successful!!!";				
+			echo "<script type='text/javascript'>alert('$message');</script>";
 			if($role == 2) header( "refresh:2;url=HN.php" );
 			if($role == 3) header( "refresh:2;url=DN.php" );			
 		} 

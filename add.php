@@ -22,7 +22,8 @@
 		if($role == 3) $table = "danang";
 		$query = "INSERT INTO $table values (DEFAULT,'$name',$price,$quantity)";
 		pg_query($pg_heroku, $query);
-		echo "Add!!!";
+		$message = "Add successful!!!";				
+		echo "<script type='text/javascript'>alert('$message');</script>";
 		if($role == 2) header( "refresh:2;url=HN.php" );
 		if($role == 3) header( "refresh:2;url=DN.php" );
 	?>
