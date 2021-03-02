@@ -131,6 +131,8 @@
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV2" style = "display:none">
+			</div>
+			<div>
 				<form action"update.php" method="post" > 
   					<p>
 						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
