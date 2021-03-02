@@ -20,9 +20,11 @@
 			$quantity = $_POST['quantity'];	
 			$query = "UPDATE danang set product_price = $price, quantity = $quantity where product_name = '$name' ";
 			pg_query($pg_heroku, $query);	
-			echo $_SESSION["role"];
+			$role =  $_SESSION["role"];
+			if($role == 2) echo "hanoi";
+			if($role == 2) echo "danang";
 			echo "Update!!!";
-			header( "refresh:2;url=danang.php" );
+			header( "refresh:2;url=DN.php" );
 		} 
 	?>
 </html>	
