@@ -87,8 +87,10 @@
 			$newpwd = $_POST["newPassword"];
 			$query = "UPDATE users set product_price = '$newpwd' where username = '$username' ";
 			pg_query($pg_heroku, $query);
-			echo "Change password successful!!!";
-			header( "refresh:1;url=index.php" );
+			
+			$message = "Change password successful!!!";				
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			header( "refresh:0;url=index.php" );
 		} 
 		else
 			echo "Current Password is not correct";
