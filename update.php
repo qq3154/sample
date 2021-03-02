@@ -22,7 +22,7 @@
 			if($_SSESION["role"] ==3) $table = "danang";	
 			$query = "UPDATE $table set product_price = $price where product_name = '$name' ";
 			pg_query($pg_heroku, $query);
-			echo "Change password successful!!!";
+			echo "$table";
 			header( "refresh:1;url=index.php" );
 		} 
 	?>
