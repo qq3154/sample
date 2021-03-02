@@ -52,15 +52,12 @@
 		<?php 			
 			session_start();
 			if($_SESSION["role"] == 3) {
-				echo "You are not allow to access this page!<br>";
-				echo "Return to main page in 1 second(s)<br><br><br><br>";
-				$message = "wrong answer";
+				$message = "You are not allow to access this page!<br>Return to main page";
 				echo "<script type='text/javascript'>alert('$message');</script>";
-				header( "refresh:2;url=index.php" );
+				header( "url=index.php" );
 			}
 			else {
-				
-						
+					
 				# Heroku credential 
 				$host_heroku = "ec2-34-203-255-149.compute-1.amazonaws.com";
 				$db_heroku = "dfafdda85iuufp";
