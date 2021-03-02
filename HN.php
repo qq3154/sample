@@ -72,7 +72,7 @@
 				$role =  $_SESSION["role"];
 			}					
 		?> 
-		<div <?php if($role == 3) {?> disabled="disabled" <?php } ?> class="mainmenu">
+		<div <?php if($role == 3) {?> display: none <?php } ?> class="mainmenu">
 			<div>
 				<br><br>
 			</div>
