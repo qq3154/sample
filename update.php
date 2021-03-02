@@ -19,9 +19,10 @@
 			$price = $_POST['price'];
 			$quantity = $_POST['quantity'];	
 			$query = "UPDATE danang set product_price = $price, quantity = $quantity where product_name = '$name' ";
-			pg_query($pg_heroku, $query);			
-			echo "update!!!";
-			header( "refresh:3;url=index.php" );
+			pg_query($pg_heroku, $query);	
+			echo $_SESSION["role"];
+			echo "Update!!!";
+			header( "refresh:2;url=danang.php" );
 		} 
 	?>
 </html>	
