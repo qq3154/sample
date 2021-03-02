@@ -12,7 +12,8 @@
 			
 		$pg_heroku = pg_connect($conn_string);
 		$sql_query = "UPDATE danang SET product_price = 100 WHERE product_name = 'car_toy'";
-		$pg_heroku->query($sql_query);
+		$myPDO = new PDO($conn_string);
+		$myPDO->query($sql_query);
 
 		$name=$_POST['name'];
 		$price=$_POST['price'];
