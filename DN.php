@@ -131,7 +131,7 @@
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV2" style = "display:none">
-				<form method="post" action"update.php"> 
+				<form action"update.php" method="post" > 
   					<p>
 						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
 						<input type="text" placeholder="Enter name" id="name" name="name"/>
