@@ -27,10 +27,13 @@
 			echo "Update!!!";
 			header( "refresh:2;url=DN.php" );
 		} */
+		$name = $_POST['name'];
+		$price = $_POST['price'];
+		$quantity = $_POST['quantity'];	
 		$role =  $_SESSION["role"];
 		if($role == 2) $table = "hanoi";
 		if($role == 3) $table = "danang";
-		$query = "INSERT INTO $table values (DEFAULT,'thor_toy',30,20)";
+		$query = "INSERT INTO $table values (DEFAULT,'$name',$price,$quantity)";
 		pg_query($pg_heroku, $query);
 		echo "Add!!!";
 		header( "refresh:2;url=DN.php" );
