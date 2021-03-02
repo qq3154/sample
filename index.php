@@ -17,7 +17,7 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					
-					<li><a href="HN.php">Danang store</a></li>
+					<li><a href="HN.php">Hanoi store</a></li>
 					<li><a href="DN.php">Danang store</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

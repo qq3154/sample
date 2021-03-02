@@ -60,8 +60,8 @@
 					<a class="navbar-brand" href="#">ATN</a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li><a href="index.php">Home</a></li>
-					<li <a href="HN.php">Hanoi store</a></li>
+					<li><a href="index.php">Home</a></li>					
+					<li><a href="HN.php">Hanoi store</a></li>
 					<li class="active"><a href="#">Danang store</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
