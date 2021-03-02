@@ -131,7 +131,7 @@
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV2" style = "display:none">
-				<form method="post" action""> 
+				<form method="post" action"update.php"> 
   					<p>
 						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
 						<input type="text" placeholder="Enter name" id="name" name="name"/>
@@ -148,19 +148,10 @@
 					</p>
 			
 					<p>
-						<input type="submit" id="btn" value="Submit" onclick="update()"/>
+						<input type="submit" id="btn" value="Submit" />
 					</p>	
 				</form>  	
-				<script>
-					function update(){
-						$name=$_POST['$name'];
-						$price=$_POST['$price'];
-						$quantity=$_POST['quantity'];
-						$query="UPDATE danang SET (product_price,product_quantity) = ('$price','$quantity') WHERE product_name = '$name' ";
-						pg_query($pg_heroku, $query);
-					}
-					
-				</script>
+				
 			</div>
 
 
