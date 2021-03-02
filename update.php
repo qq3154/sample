@@ -17,13 +17,9 @@
 		if ($_POST["name"] == $row["product_name"]) {
 			$name = $_POST['name'];
 			$price = $_POST['price'];
-			$quantity = $_POST['quantity'];
-			if($_SSESION["role"] ==2) $table = "hanoi";
-			if($_SSESION["role"] ==3) $table = "danang";	
-			$query = "UPDATE danang set product_price = $price where product_name = '$name' ";
-			pg_query($pg_heroku, $query);
-			if($_SSESION["role"] ==2) echo "hanoi";
-			if($_SSESION["role"] =='3') echo "danang";
+			$quantity = $_POST['quantity'];	
+			$query = "UPDATE danang set product_price = $price, quantity = $quantity where product_name = '$name' ";
+			pg_query($pg_heroku, $query);			
 			echo "update!!!";
 			header( "refresh:3;url=index.php" );
 		} 
