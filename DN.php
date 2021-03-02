@@ -150,11 +150,37 @@
 					<p>
 						<input type="submit" id="btn" value="Submit" />
 					</p>	
-				</form>  	
-				
+				</form>  					
 			</div>
 
+			<ion-list>
+				<ion-item>
+					<h3>Add products</h3>
+					<button onclick="myFunction(3)">Add</button>              
+				</ion-item>
+			</ion-list>
+			<div class="myDIV" id="myDIV3" style = "display:none">
+				<form action="add.php" method="post" > 
+  					<p>
+						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
+						<input type="text" placeholder="Enter name" id="name" name="name"/>
+					</p>
 			
+					<p>
+						<label>Product price: &nbsp;&nbsp;&nbsp;&nbsp; </label>
+						<input type="password" placeholder="Enter price" id="price" name="price"/>
+					</p>
+                
+					<p>
+						<label>Product quantity:</label>
+						<input type="password" placeholder="Enter quantity" id="quantity" name="quantity"/>
+					</p>
+			
+					<p>
+						<input type="submit" id="btn" value="Submit" />
+					</p>	
+				</form>  					
+			</div>
 		</div>
 		
 		<script>
@@ -163,6 +189,8 @@
 					var x = document.getElementById("myDIV1");
 				if(i==2)
 					var x = document.getElementById("myDIV2");
+				if(i==3)
+					var x = document.getElementById("myDIV3");
 				if (x.style.display === "none") {
 					x.style.display = "block";
 				} else {
