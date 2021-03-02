@@ -54,6 +54,8 @@
 			if($_SESSION["role"] == 3) {
 				echo "You are not allow to access this page!<br>";
 				echo "Return to main page in 1 second(s)<br><br><br><br>";
+				$message = "wrong answer";
+				echo "<script type='text/javascript'>alert('$message');</script>";
 				header( "refresh:2;url=index.php" );
 			}
 			else {
