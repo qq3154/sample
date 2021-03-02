@@ -77,10 +77,10 @@
 			<div>
 				<br><br>
 			</div>
-			<ion-list <?php if ($role == 1) echo " style='display: none';"; ?>>
+			<ion-list >
 				<ion-item>
-					<h3>Show products information </h3>
-					<button onclick="myFunction(1)">Show</button>              
+					<h3 <?php if ($role == 1) echo " style='display: none';"; ?>>Show products information </h3>
+					<button <?php if ($role == 1) echo " style='display: none';"; ?> onclick="myFunction(1)">Show</button>              
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV1" style = "display:none">
