@@ -22,7 +22,7 @@
 			pg_query($pg_heroku, $query);	
 			$role =  $_SESSION["role"];
 			if($role == 2) echo "hanoi";
-			if($role == 2) echo "danang";
+			if($role == 3) echo "danang";
 			echo "Update!!!";
 			header( "refresh:2;url=DN.php" );
 		} 
