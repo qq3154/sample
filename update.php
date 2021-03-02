@@ -10,8 +10,15 @@
 		$conn_string = "host=$host_heroku port=5432 dbname=$db_heroku user=$user_heroku password=$pw_heroku";
 			
 		$pg_heroku = pg_connect($conn_string);
-		$query = "UPDATE danang set product_price = 120 where username = 'car_toy' ";
-		pg_query($pg_heroku, $query);
-		echo "Change password successful!!!";
+
+		$query = "select * from danang where product_name ='car_toy' ";
+		$result = pg_query($pg_heroku, $query);
+		$row = pg_fetch_array($result);
+		if ($_POST["name"] == $row["product_name"]) {
+			$query = "UPDATE danang set product_price = 120 where username = 'car_toy' ";
+			pg_query($pg_heroku, $query);
+			echo "Change password successful!!!";
+			header( "refresh:1;url=index.php" );
+		} 
 	?>
 </html>	
