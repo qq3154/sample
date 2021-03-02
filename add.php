@@ -24,7 +24,7 @@
 		pg_query($pg_heroku, $query);
 		$message = "Add successful!!!";				
 		echo "<script type='text/javascript'>alert('$message');</script>";
-		if($role == 2) header( "refresh:2;url=HN.php" );
-		if($role == 3) header( "refresh:2;url=DN.php" );
+		if($role == 2) header( "refresh:0;url=HN.php" );
+		if($role == 3) header( "refresh:0;url=DN.php" );
 	?>
 </html>	
