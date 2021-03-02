@@ -62,7 +62,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="index.php">Home</a></li>
 					<li class="active"<a href="#">Hanoi store</a></li>
-					<li ><a href="#">Danang store</a></li>
+					<li ><a href="DN.php">Danang store</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="changepassword.php"><span class="glyphicon glyphicon-user"></span> Change Password</a></li>
