@@ -131,8 +131,6 @@
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV2" style = "display:none">
-			</div>
-			<div>
 				<form action"update.php" method="post" > 
   					<p>
 						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
@@ -156,7 +154,24 @@
 				
 			</div>
 
-
+			<div id="form">
+				<form action="connect.php" method="post">
+					<p>
+						<label>Username:</label>
+						<input type="text" placeholder="Enter Username" id="user" name="user"/>
+					</p>
+			
+					<p>
+						<label>Password:</label>
+						<input type="password" placeholder="Enter Password" id="pass" name="pass"/>
+					</p>
+			
+					<p>
+						<input type="submit" id="btn" value="Login"/>
+					</p>		
+			
+				</form>
+			</div>
 		</div>
 		
 		<script>
