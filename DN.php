@@ -144,7 +144,7 @@
                 
 					<p>
 						<label>Product quantity:</label>
-						<input type="password" placeholder="Enter price" id="quantity" name="quantity"/>
+						<input type="password" placeholder="Enter quantity" id="quantity" name="quantity"/>
 					</p>
 			
 					<p>
