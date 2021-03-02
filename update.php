@@ -27,7 +27,7 @@
 			if($role == 3) header( "refresh:2;url=DN.php" );			
 		} 
 		else{
-			echo "Can't find item $name";
+			echo "Can't find item $name ...";
 			if($role == 2) header( "refresh:2;url=HN.php" );
 			if($role == 3) header( "refresh:2;url=DN.php" );	
 		}
