@@ -20,7 +20,7 @@
 			}	
 			.mainmenu{
 				width: 80%;
-				margin: auto;
+				
 				background-color: beige;
 			}
 			h3{
