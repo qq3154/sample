@@ -79,7 +79,7 @@
 		<div class="mainmenu">
 			<ion-list>
 				<ion-item>
-					<h3>Update products </h3>
+					<h3>Show products information </h3>
 					<button onclick="myFunction(1)">Update</button>              
 				</ion-item>
 			</ion-list>
@@ -119,13 +119,14 @@
 
 					echo '</table></body></html>';
 				?>		
-			</div>
+			</div>				
 			<div>
+				<br><br>
 			</div>
 
 			<ion-list>
 				<ion-item>
-					<h3>Show products information</h3>
+					<h3>Update products</h3>
 					<button onclick="myFunction(2)">show</button>              
 				</ion-item>
 			</ion-list>
