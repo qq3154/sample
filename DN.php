@@ -163,7 +163,7 @@
 			<ion-list>
 				<ion-item>
 					<h3>Add products</h3>
-					<button onclick="myFunction(3)">Add</button>              
+					<button <?php if($role == 1) {?> disabled="disabled" <?php } ?> onclick="myFunction(3)">Add</button>              
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV3" style = "display:none">
@@ -195,7 +195,7 @@
 			<ion-list>
 				<ion-item>
 					<h3>Delete products</h3>
-					<button onclick="myFunction(4)">Delete</button>              
+					<button <?php if($role == 1) {?> disabled="disabled" <?php } ?> onclick="myFunction(4)">Delete</button>              
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV4" style = "display:none">
