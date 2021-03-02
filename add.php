@@ -13,7 +13,8 @@
 
 		$query = "select * from danang where product_name ='car_toy' ";
 		$result = pg_query($pg_heroku, $query);
-		$row = pg_fetch_array($result);
+		
+		/*$row = pg_fetch_array($result);
 		if ($_POST["name"] == $row["product_name"]) {
 			$name = $_POST['name'];
 			$price = $_POST['price'];
@@ -25,6 +26,10 @@
 			pg_query($pg_heroku, $query);				
 			echo "Update!!!";
 			header( "refresh:2;url=DN.php" );
-		} 
+		} */
+		$query = "INSERT INTO $table values (DEFAULT,'thor_toy',30,20)";
+		pg_query($pg_heroku, $query);
+		echo "Add!!!";
+		header( "refresh:2;url=DN.php" );
 	?>
 </html>	
