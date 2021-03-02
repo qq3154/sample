@@ -72,7 +72,7 @@
 				$role =  $_SESSION["role"];
 			}					
 		?> 
-		<div id="maindiv" <?php if($role == 3) {<script type="text/javascript">document.getElementById('maindiv').style.display = 'none';</script>} ?> class="mainmenu">
+		<div id="maindiv" <?php if($role == 3) {?><script type="text/javascript">document.getElementById('maindiv').style.display = 'none';</script> <?php}  class="mainmenu">
 			<div>
 				<br><br>
 			</div>
