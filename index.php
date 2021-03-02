@@ -37,8 +37,6 @@
 			if($_SESSION["valid"] != true){
 				header("location: login.php");
 			}
-			echo '<p>TEST HEROKU POSTGRESQL DATABASE </p>'; 
-			echo $_SESSION["role"];
 		?>	
 		<img src="img/toy.jpg" alt="Toy Story">
 	</body>
