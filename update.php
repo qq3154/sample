@@ -12,12 +12,12 @@
 			
 		$pg_heroku = pg_connect($conn_string);
 
-		$name=$_POST['$name'];
-		$price=$_POST['$price'];
+		$name=$_POST['name'];
+		$price=$_POST['price'];
 		$quantity=$_POST['quantity'];
 		$query="UPDATE danang SET product_price = $price, product_quantity = $quantity WHERE product_name = $name ";
 		pg_query($pg_heroku, $query);
-		echo "Update!!!";
+		echo "Update!!! $price $name";
 		header( "refresh:1;url=index.php" );
 	?>
 </html>	
