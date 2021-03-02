@@ -33,6 +33,8 @@
 			}
 		?>	
 		<p>ATN is a Vietnamese company which is selling toys to teenagers in many provinces all over Vietnam. The company has the revenue over 500.000 dollars/year. </p>
-		<img src="img/toy.jpg" alt="Toy Story" style="max-width: 100%;height: auto;position: absolute;">
+		<div style="margin: auto">
+			<img src="img/toy.jpg" alt="Toy Story" style="max-width: 100%;height: auto;position: absolute;">
+		</div>
 	</body>
 </html>
