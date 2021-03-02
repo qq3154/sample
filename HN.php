@@ -31,7 +31,7 @@
 		</style>
 		<?php 			
 			session_start();
-			if($_SESSION["role"] == 2) {
+			if($_SESSION["role"] == 3) {
 				echo "You are not allow to access this page!";
 				echo "Return to main page in 1 second(s)";
 				header( "refresh:2;url=index.php" );
