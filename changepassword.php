@@ -85,7 +85,7 @@
 		$row = pg_fetch_array($result);
 		if ($_POST["currentPassword"] == $row["password"]) {
 			$newpwd = $_POST["newPassword"];
-			$query = "UPDATE users set product_price = '$newpwd' where username = '$username' ";
+			$query = "UPDATE users set password = '$newpwd' where username = '$username' ";
 			pg_query($pg_heroku, $query);
 			echo "Change password successful!!!";
 			header( "refresh:1;url=index.php" );
