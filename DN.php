@@ -131,41 +131,26 @@
 				</ion-item>
 			</ion-list>
 			<div class="myDIV" id="myDIV2" style = "display:none">
-				<?php
-					# Get data by query
-					$query = 'select * from danang';
-					$result = pg_query($pg_heroku, $query);
-					# Display data column by column
-					$i = 0;
-					echo '<html><body><table><tr>';
-					while ($i < pg_num_fields($result))
-					{
-						$fieldName = pg_field_name($result, $i);
-						echo '<td>' . $fieldName . '</td>';
-						$i = $i + 1;
-					}
-					echo '</tr>';
-					# Display data row by row
-					$i = 0;
-					while ($row = pg_fetch_row($result)) 
-					{
-						echo '<tr>';
-						$count = count($row);
-						$y = 0;
-						while ($y < $count)
-						{
-							$c_row = current($row);
-							echo '<td>' . $c_row . '</td>';
-							next($row);
-							$y = $y + 1;
-						}
-						echo '</tr>';
-						$i = $i + 1;
-					}
-					pg_free_result($result);
-
-					echo '</table></body></html>';
-				?>		
+				<form method="post" action""> 
+  					<p>
+						<label>Product name: &nbsp; &nbsp;&nbsp;</label>
+						<input type="text" placeholder="Enter name" id="prodcutname" name="prodcutname"/>
+					</p>
+			
+					<p>
+						<label>Product price: &nbsp;&nbsp;&nbsp;&nbsp; </label>
+						<input type="password" placeholder="Enter price" id="productprice" name="productprice"/>
+					</p>
+                
+					<p>
+						<label>Product quantity:</label>
+						<input type="password" placeholder="Enter price" id="productquantity" name="productquantity"/>
+					</p>
+			
+					<p>
+						<input type="submit" id="btn" value="Submit"/>
+					</p>	
+				</form>  	
 			</div>
 
 
